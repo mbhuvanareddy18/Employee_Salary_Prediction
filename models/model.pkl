@@ -1,0 +1,10 @@
+import pickle
+from sklearn.linear_model import LinearRegression
+
+# Sample model
+model = LinearRegression()
+model.fit([[1], [2], [3]], [2, 4, 6])  # Dummy data
+
+# Save the model
+with open('models/model.pkl', 'wb') as f:
+    pickle.dump(model, f)
